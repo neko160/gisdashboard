@@ -1,0 +1,48 @@
+
+/*Banner*/
+
+/*mobile version: */
+
+
+/* desk version */
+#app{
+  display: grid;
+  height: 100%;
+}
+
+.item1 { grid-area: header1; }
+.item11 { grid-area: header2; }
+.item12 { grid-area: header3; }
+.item2 { grid-area: map;}
+.item3 { grid-area:  menu; }
+.item4 { grid-area: menu2; }
+.item5 { grid-area: menu3; }
+.item6 { grid-area: menu4; }
+.item7 { grid-area: menu5; }
+.item8 { grid-area: menu6; }
+
+.grid-container {
+  display: grid;
+ 
+  grid-template-areas:
+    'header1 header2 header3'
+    'menu map map'
+    'menu2 map map'
+    'menu3 map map'
+    'menu4 menu5 menu6';
+    
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px){
+  
+}
