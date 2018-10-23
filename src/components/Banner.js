@@ -7,6 +7,7 @@ class Banner extends React.Component {
             <Header as='h2' className="banner_wrapper">
                 <Icon name='plug' />
                 <Header.Content>DASHBOARD</Header.Content>
+               
             </Header>
         );
     }
