@@ -7,7 +7,7 @@ class TwitterTimeline extends React.Component {
             <div className="menuTwitter_wrapper"> 
             <a className="twitter-timeline" 
                 data-width="499" 
-                data-height="450" data-theme="dark" href="https://twitter.com/Chilquinta600?ref_src=twsrc%5Etfw">Tweets by Chilquinta600</a>
+                data-height="440" data-theme="dark" href="https://twitter.com/Chilquinta600?ref_src=twsrc%5Etfw">Tweets by Chilquinta600</a>
             </div>
            
            

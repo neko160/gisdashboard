@@ -25,7 +25,7 @@ class Mapa extends React.Component {
         map = new Map("map", {
             center: [-71.6022, -33.1397],
             zoom: 6,
-            basemap: "topo",
+            basemap: "dark-gray",
             sliderStyle: "small"
         });
 

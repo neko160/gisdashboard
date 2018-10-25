@@ -6,8 +6,8 @@ class Menu3 extends React.Component {
         return (
            
             <Statistic  className="menu3_symbol" color="pink" inverted>
-              <Statistic.Value>158050</Statistic.Value>
-              <Statistic.Label>ONLINE</Statistic.Label>
+              <Statistic.Value>540</Statistic.Value>
+              <Statistic.Label>customers offline</Statistic.Label>
             </Statistic>
            
         );

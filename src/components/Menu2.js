@@ -7,7 +7,7 @@ class Menu2 extends React.Component {
            
             <Statistic  className="menu2_symbol" color="teal" inverted>
               <Statistic.Value>22</Statistic.Value>
-              <Statistic.Label>out</Statistic.Label>
+              <Statistic.Label>Power Outages</Statistic.Label>
             </Statistic>
            
         );

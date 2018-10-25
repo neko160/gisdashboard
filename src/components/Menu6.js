@@ -1,14 +1,6 @@
 import React from 'react';
 import ReactTable from "react-table";
 
-class Pagination extends React.Component {
-    render = () => (
-      <div>
-        You are on page {this.props.page + 1} of {this.props.pages}.
-      </div>
-    );
-  }
-
 
 class Menu6 extends React.Component {
     constructor(props){
@@ -34,35 +26,45 @@ class Menu6 extends React.Component {
             friend: {
               name: 'Jason Maurer',
               age: 23,
-            }
+            },
+            location: "Chile",
+            Status: "Online"
           },{
             name: 'Tanner Linsley',
             age: 26,
             friend: {
               name: 'Jason Maurer',
               age: 23,
-            }
+            },
+            location: "Chile",
+            Status: "Offline"
           },{
             name: 'Tonner Linsley',
             age: 26,
             friend: {
               name: 'Jason Maurer',
               age: 23,
-            }
+            },
+            location: "Chile",
+            Status: "Online"
           },{
             name: 'Tinner Linsley',
             age: 26,
             friend: {
               name: 'Jason Maurer',
               age: 23,
-            }
+            },
+            location: "Chile",
+            Status: "Offline"
           },{
             name: 'Tunner Linsley',
             age: 26,
             friend: {
               name: 'Jason Maurer',
               age: 23,
-            }
+            },
+            location: "Chile",
+            Status: "On the way"
           }];
         
           const columns = [{
@@ -79,6 +81,12 @@ class Menu6 extends React.Component {
           }, {
             Header: props => <span>Friend Age</span>, // Custom header components!
             accessor: 'friend.age'
+          },{
+            Header: props => <span>Location</span>, // Custom header components!
+            accessor: 'location'
+          },{
+            Header: props => <span>Status</span>, // Custom header components!
+            accessor: 'Status'
           }];
         return (
        
