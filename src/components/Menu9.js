@@ -7,7 +7,7 @@ class Menu9 extends React.Component {
            
             <Statistic size='tiny'  className="menu8_symbol" color="red" inverted>
               <Statistic.Value>10/25/2018 14:00:55</Statistic.Value>
-              <Statistic.Label>LAST ETR</Statistic.Label>
+              <Statistic.Label>Último ETR</Statistic.Label>
             </Statistic>
            
         );

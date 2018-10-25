@@ -6,7 +6,7 @@ class BannerFleet extends React.Component {
         return (
             <Header as='h2' className="bannerFleet_wrapper">
                 <Icon className="banner_title" name='car' />
-                <Header.Content className="banner_title">Car Fleet</Header.Content>
+                <Header.Content className="banner_title">Flota Vehicular</Header.Content>
                
             </Header>
         );

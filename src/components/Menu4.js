@@ -7,7 +7,7 @@ class Menu4 extends React.Component {
            
             <Statistic  className="menu4_symbol" color="red" inverted>
               <Statistic.Value>158050</Statistic.Value>
-              <Statistic.Label>Customers online</Statistic.Label>
+              <Statistic.Label>Clientes con energía</Statistic.Label>
             </Statistic>
            
         );

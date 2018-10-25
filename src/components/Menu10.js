@@ -7,7 +7,7 @@ class Menu10 extends React.Component {
            
             <Statistic className="menu10_symbol" color="purple" inverted>
               <Statistic.Value>20</Statistic.Value>
-              <Statistic.Label>CARS ON THE WAY</Statistic.Label>
+              <Statistic.Label>Técnicos en camino</Statistic.Label>
             </Statistic>
            
         );

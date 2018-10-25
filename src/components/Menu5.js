@@ -10,8 +10,8 @@ class Menu5 extends React.Component {
                    <Header as='h2' inverted color='yellow' className="menu5_header">
                     <Icon name='info' />
                     <Header.Content >
-                         Information
-                    <Header.Subheader>See the info. about what you clicked.</Header.Subheader>
+                         Información
+                    <Header.Subheader>Ver información acerca de lo que se ha seleccionado del mapa.</Header.Subheader>
                     </Header.Content>
 
 
@@ -19,8 +19,8 @@ class Menu5 extends React.Component {
                 <div className="menu5_element_clicked">
                     <List inverted relaxed className="menu5_list">
                         <List.Item>SSEE: {400}</List.Item>
-                        <List.Item>Name: {"The name"}</List.Item>
-                        <List.Item>Customers: {500}</List.Item>
+                        <List.Item>Nombre: {"The name"}</List.Item>
+                        <List.Item>Clientes: {500}</List.Item>
                     </List>
                 </div>
                 </div>
