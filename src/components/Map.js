@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from 'esri/map';
-import '../css/style.css';
+import '../css/styles2.css';
 import { connect } from 'react-redux';
 import { _login } from '../redux/actions';
 import ArcGISDynamicMapServiceLayer from 'esri/layers/ArcGISDynamicMapServiceLayer';

@@ -5,7 +5,7 @@ class Menu3 extends React.Component {
     render() {
         return (
            
-            <Statistic  className="centered" color="pink" inverted>
+            <Statistic  className="menu3_symbol" color="pink" inverted>
               <Statistic.Value>158050</Statistic.Value>
               <Statistic.Label>ONLINE</Statistic.Label>
             </Statistic>

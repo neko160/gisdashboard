@@ -5,12 +5,11 @@ class Menu1 extends React.Component {
     render() {
         return (
            
-            <Statistic className="centered" color="yellow" inverted>
+            <Statistic className="menu1_symbol" color="yellow" inverted>
               <Statistic.Value>54</Statistic.Value>
               <Statistic.Label>Shut Down</Statistic.Label>
             </Statistic>
             
-           
         );
     }
 }
