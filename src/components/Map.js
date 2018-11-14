@@ -1,13 +1,12 @@
 import React from 'react';
 import Map from 'esri/map';
-import '../css/styles2.css';
 import { connect } from 'react-redux';
 import { _login } from '../redux/actions';
 import ArcGISDynamicMapServiceLayer from 'esri/layers/ArcGISDynamicMapServiceLayer';
 import FeatureLayer from 'esri/layers/FeatureLayer';
 import getLayer from '../services/layers-service';
 import LayerList from 'esri/dijit/LayerList';
-
+import getInfoTemplate from '../services/infoTemplates';
 
 var map;
 
@@ -34,16 +33,21 @@ class Mapa extends React.Component {
         var l = login_()
             .then(token => {
 
-                var seds = new ArcGISDynamicMapServiceLayer(getLayer.read_seds(), { id: "SSEE", "showAttribution": false });
+                var interrupciones = new ArcGISDynamicMapServiceLayer(getLayer.read_seds(), { id: "Interrupciones", "showAttribution": false });
+                interrupciones.setInfoTemplates({
+                    0: {infoTemplate: getInfoTemplate.getSectorCentroide()}
+                  });
+    
+                  interrupciones.refreshInterval = 1;
+                  interrupciones.setImageFormat("png32");
+                //var campamentos = new FeatureLayer(getLayer.read_campamentos(), { id: "Campamentos", "showAttribution": false });
 
-                var campamentos = new FeatureLayer(getLayer.read_campamentos(), { id: "Campamentos", "showAttribution": false });
+                //var unidad_vecinal = new FeatureLayer(getLayer.read_unidad_vecinal(), { id: "Unidad Vecinal", "showAttribution": false });
 
-                var unidad_vecinal = new FeatureLayer(getLayer.read_unidad_vecinal(), { id: "Unidad Vecinal", "showAttribution": false });
-
-                var redes = new ArcGISDynamicMapServiceLayer(getLayer.read_red(), { id: "Redes", "showAttribution": false });
+                //var redes = new ArcGISDynamicMapServiceLayer(getLayer.read_red(), { id: "Redes", "showAttribution": false });
 
                 //LayerList Widget:
-                var llWidget = new LayerList({
+               /* var llWidget = new LayerList({
                     map: map,
                     layers: [
                         {
@@ -68,7 +72,8 @@ class Mapa extends React.Component {
                     showOpacitySlider: true
                 }, "layerList");
                 llWidget.startup();
-                map.addLayers([redes, seds, campamentos, unidad_vecinal]);
+                */
+                map.addLayers([interrupciones]);
 
             }).catch(error => {
                 console.log('error :', error);

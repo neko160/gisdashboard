@@ -18,7 +18,7 @@ const getLayer = () => {
         },
         read_seds() {
             //return serviceURL + "Chilquinta_006/Equipos_pto_006/MapServer?f=json&token=" + token;
-            return serviceURL + "Chilquinta_006/Equipos_pto_006/MapServer";
+            return serviceURL + "Interrupciones/PO_WEB_EXT/MapServer";
         },
         read_campamentos() {
             //return serviceURL + "MANTENIMIENTO/Otras_Capas/MapServer/4?f=json&token=" + token;

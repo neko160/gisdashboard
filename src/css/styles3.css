@@ -1,4 +1,3 @@
-
 html {
     background: #131212;
 }
@@ -12,8 +11,8 @@ html {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 50px 9em repeat(4, 12.8em);
-    grid-template-columns: repeat(14, 0.25fr);
+    grid-template-rows: 50px repeat(33, minmax(50px, 0.025fr));
+    grid-template-columns: 70px repeat(4, minmax(50px, 0.25fr));
     grid-gap: 10px;
 }
 
@@ -21,20 +20,23 @@ html {
     background: #191818;
 }
 
-/*Banner*/
-
 .header1 {
     grid-column: 1/2;
-}
-
-.banner_wrapper {
-    font-size: 15px !important;
     width: 100%;
     height: 100%;
     justify-content: center;
-    align-content: center;
-    align-items: center;
     justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: grid;
+}
+
+.banner_wrapper {
+    font-size: 10px !important;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     color: white !important;
@@ -44,33 +46,41 @@ html {
     padding: 0 !important
 }
 
-/*Estado*/
-
 .header2 {
-    grid-column: 2/4;
+    grid-column: 2/-1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-
 
 .wrapper_estado {
     height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.item_group_estado {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .estado_fit {
-    height: inherit;
-}
-
-.header2_wrapper {
     height: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
 }
 
-.header2_menu {
-    height: inherit;
+.estado_content {
+    width: 50%;
 }
 
-.header2_menuitem {
-    width: 20%;
-    text-align: center;
-    justify-content: center;
+.ui.items:not(.unstackable)>.item>.image, .ui.items:not(.unstackable)>.item>.image>img {
+    width: 30% !important;
 }
 
 .estado_header {
@@ -85,36 +95,51 @@ html {
 
 .estado_color_green {
     background: rgb(53, 231, 18) !important;
+    width: 30% !important;
+    height: 100% !important;
 }
 
 .estado_color_red {
     background: red !important;
+    width: 30% !important;
+    height: 100% !important;
 }
 
 .estado_color_white {
     background: white !important;
+    width: 30% !important;
+    height: 100% !important;
 }
 
 .estado_color_yellow {
     background: yellow !important;
+    width: 30% !important;
+    height: 100% !important;
 }
 
 .estado_color_orange {
     background: orange !important;
+    width: 30% !important;
+    height: 100% !important;
 }
 
-/*Fecha.js*/
-
 .header3 {
-    grid-column: 4/8;
+    grid-column: 1/-1;
+    grid-row: 2;
     color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper_fecha {
     width: inherit;
     height: 100%;
     align-content: center;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .fecha_h4 {
@@ -123,6 +148,8 @@ html {
     align-items: center;
     font-size: 15px !important;
     color: white;
+    margin: 0 !important;
+
 }
 
 .fecha_header {
@@ -134,26 +161,28 @@ html {
     justify-content: space-evenly;
 }
 
-/*Empresas*/
-
 .header4 {
-    grid-column: 8/13;
-    grid-row: 1/2;
+    grid-column: 1/-1;
+    grid-row: 3;
     color: white;
 }
 
-/*Menus*/
+.empresas_menuitem{
+    font-size: 10px;
+    width: 20%;
+}
 
 .menu1_symbol, .menu2_symbol, .menu3_symbol, .menu4_symbol, .menu8_symbol, .menu10_symbol, .menu11_symbol {
     width: inherit;
     justify-items: center;
     height: 100%;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .number_font {
-    font-size: 3rem !important;
+    /*font-size: 3rem !important;*/
 }
+
 
 .more_details_button, #more_details_button1 {
     color: yellow !important;
@@ -195,214 +224,179 @@ html {
     font-size: smaller !important;
 }
 
-/*Menu1: Ordenes*/
 
 .menu1 {
-    grid-row: 2/3;
+    grid-row: 8/10;
+    grid-column: 1/4;
     width: 100%;
     height: 100%;
 }
-
-/*Menu2: Ordenes Vencidas*/
 
 .menu2 {
-    grid-row: 3/4;
+    grid-row: 8/10;
+    grid-column: 4/-1;
     width: 100%;
     height: 100%;
 }
-
-/*Menu3: Ordenes Interrumpidas*/
 
 .menu3 {
-    grid-row: 4/5;
+    grid-row: 10/12;
+    grid-column: 1/4;
     width: 100%;
     height: 100%;
 }
-
-/*Menu4: Ordenes ETR*/
 
 .menu4 {
-    grid-row: 5/6;
+    grid-row: 10/12;
+    grid-column: 4/-1;
     width: 100%;
     height: 100%;
 }
 
-/*Menu5: Electrodependientes*/
 
-.menu5 {
-    grid-column: 14/15;
-    grid-row: 4/5;
-    width: 100%;
-    height: 100%;
-}
-
-/*Menu7: Tabla*/
-
-.menu7 {
-    grid-column: 2/13;
-    grid-row: 5/-1;
-}
-
-/*Menu6: Valparaíso*/
-
-.menu6 {
-    grid-row: 2/3;
-    grid-column: 13/14;
-    width: 100%;
-    height: 100%;
-}
-
-/*Menu8: Costa */
-
-.menu8 {
-    grid-column: 13/14;
-    grid-row: 3/4;
-    width: 100%;
-    height: 100%;
-}
-
-/*Menu9: MargaMarga */
-
-.menu9 {
-    grid-column: 13/14;
-    grid-row: 4/5;
-    width: 100%;
-    height: 100%;
-}
-
-/*Menu10: Quillota */
-
-.menu10 {
-    grid-column: 13/14;
-    grid-row: 5/6;
-    width: 100%;
-    height: 100%;
-}
-
-/*Menu11: LosAndes */
-
-.menu11 {
-    grid-column: 13/14;
-    grid-row: 6/7;
-    width: 100%;
-    height: 100%;
-}
-
-/*Menu12: GC */
-
-.menu12 {
-    grid-column: 14/15;
-    grid-row: 2/3;
-    width: 100%;
-    height: 100%;
-}
-
-/*Agua Potable Rural*/
-
-.menu13 {
-    grid-column: 14/15;
-    grid-row: 5/6;
-    width: 100%;
-    height: 100%;
-}
-
-/*Clientes Criticos*/
-
-.menu14 {
-    grid-column: 14/15;
-    grid-row: 3/4;
-    width: 100%;
-    height: 100%;
-}
-
-/*Autoridades*/
-
-.menu15 {
-    grid-column: 14/15;
-    grid-row: 6/7;
-    width: 100%;
-    height: 100%;
-}
-
-/*MovilesEnTurno*/
-
-.menu16 {
-    grid-column: 1/2;
-    grid-row: 6/7;
-    width: 100%;
-    height: 100%;
-}
-
-/*BannerComunas*/
-
-.menu17 {
-    grid-column: 13/14;
-    grid-row: 1/2;
-    width: 100%;
-    height: 100%;
-}
-
-/*BannerClientes*/
-
-.menu18 {
-    grid-column: 14/15;
-    grid-row: 1/2;
-    width: 100%;
-    height: 100%;
-}
-
-/*IncidenciasOSF*/
-
-.menu19 {
-    grid-column: 12/13;
-    grid-row: 2/3;
-    width: 100%;
-    height: 100%;
-}
-
-/*BannerClientes*/
-
-.menu20 {
-    grid-column: 12/13;
-    grid-row: 3/4;
-    width: 100%;
-    height: 100%;
-}
-
-/*BannerClientes*/
-
-.menu21 {
-    grid-column: 12/13;
-    grid-row: 4/5;
-    width: 100%;
-    height: 100%;
-}
-
-/*Mapp*/
 
 .mapp {
-    grid-column: 2/12;
-    grid-row: 2/5;
+    grid-row: 4/8;
+    grid-column:1/-1;
 }
 
 #map {
     height: 100%;
 }
 
-/*Redes
-
-.redes_sociales_wrapper, .bannerFleet_wrapper {
-    background: #191818;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
+/*Tabla no se muestra en vertical, si en horizontal (hacer)*/
+.menu7 {
+    display: none;
 }
-*/
+
+
+.menu17 {
+    grid-row: 12/13;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu6 {
+    grid-row: 13/15;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu8 {
+    grid-row: 15/17;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu9 {
+    grid-row: 17/19;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu10 {
+    grid-row: 19/21;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu11 {
+    grid-row: 21/23;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu18 {
+    grid-row: 23/24;
+    grid-column:1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.menu12 {
+    grid-row: 24/26;
+    grid-column:3/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu14 {
+    grid-row: 24/26;
+    grid-column: 1/3;
+    width: 100%;
+    height: 100%;
+}
+
+.menu5 {
+    grid-row: 26/28;
+    grid-column: 1/4;
+    width: 100%;
+    height: 100%;
+}
+
+.menu13 {
+    grid-row: 26/28;
+    grid-column: 4/6;
+    width: 100%;
+    height: 100%;
+}
+
+.menu15 {
+    grid-row: 28/30;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu16 {
+    grid-row: 24/26;
+    grid-column: 1/3;
+    width: 100%;
+    height: 100%;
+}
+
+.menu19 {
+    grid-row: 30/32;
+    grid-column: 1/3;
+    width: 100%;
+    height: 100%;
+}
+
+.menu20 {
+    grid-row: 30/32;
+    grid-column: 3/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu21 {
+    grid-row: 32/34;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+}
+
+.banner_clientes , .banner_comunas{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.clientes_title, .clientes_icon, .comunas_title, .comunas_icon{
+    font-size: initial;
+}
+
 
 .ReactTable {
     position: relative;
@@ -883,6 +877,426 @@ html {
     background: #3f3f3f;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1440px){
+
+    .ui.statistic > .label, .ui.statistics .statistic > .label{
+        font-size: 12px;
+    }
+    .ui.small.statistic > .value, .ui.small.statistics .statistic > .value{
+         font-size: 2rem !important;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+
+    .empresas_menuitem{
+        font-size: 13px;
+        width: 20%;
+    }
+
+    .menu7{
+        display: grid;
+    }
+
+    html {
+        background: #131212;
+    }
+    
+    #app {
+        display: grid;
+        height: inherit;
+        padding: 10px;
+        background: #131212;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-rows: 50px 9em repeat(4, minmax(125px, 1fr));
+        grid-template-columns: repeat(14, minmax(50px, 0.20fr));
+        grid-gap: 10px;
+    }
+    
+    .grid-container>div {
+        background: #191818;
+    }
+    
+    /*Banner*/
+    
+    .header1 {
+        grid-column: 1/2;
+    }
+    
+    .banner_wrapper {
+        font-size: 15px !important;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        color: white !important;
+    }
+    
+    .banner_title {
+        padding: 0 !important
+    }
+    
+    /*Estado*/
+    
+    .header2 {
+        grid-column: 2/4;
+    }
+    
+    
+    .wrapper_estado {
+        height: 100%;
+    }
+    
+    .estado_fit {
+        height: inherit;
+    }
+    
+    .header2_wrapper {
+        height: 100%;
+    }
+    
+    .header2_menu {
+        height: inherit;
+    }
+    
+    .header2_menuitem {
+        width: 20%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .estado_header {
+        height: 100%;
+        color: white !important;
+        width: 100%;
+        justify-content: center;
+        display: grid !important;
+        align-content: center;
+        font-size: 15px !important;
+    }
+    
+    .estado_color_green {
+        background: rgb(53, 231, 18) !important;
+    }
+    
+    .estado_color_red {
+        background: red !important;
+    }
+    
+    .estado_color_white {
+        background: white !important;
+    }
+    
+    .estado_color_yellow {
+        background: yellow !important;
+    }
+    
+    .estado_color_orange {
+        background: orange !important;
+    }
+    
+    /*Fecha.js*/
+    
+    .header3 {
+        grid-column: 4/8;
+        grid-row: 1;
+        color: white;
+    }
+    
+    .wrapper_fecha {
+        width: inherit;
+        height: 100%;
+        align-content: center;
+        display: grid;
+    }
+    
+    .fecha_h4 {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px !important;
+        color: white;
+    }
+    
+    .fecha_header {
+        color: white;
+    }
+    
+    .wrapper_fecha_content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    /*Empresas*/
+    
+    .header4 {
+        grid-column: 8/13;
+        grid-row: 1/2;
+        color: white;
+    }
+    
+    /*Menus*/
+    
+    .menu1_symbol, .menu2_symbol, .menu3_symbol, .menu4_symbol, .menu8_symbol, .menu10_symbol, .menu11_symbol {
+        width: inherit;
+        justify-items: center;
+        height: 100%;
+        justify-content: center;
+        padding-top: 0.5em;
+    }
+    
+    .number_font {
+        font-size: 2.5rem !important;
+    }
+    
+    .more_details_button, #more_details_button1 {
+        color: yellow !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button2 {
+        color: rgb(0, 214, 0) !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button3 {
+        color: rgb(248, 66, 193) !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button4 {
+        color: rgb(0, 174, 255) !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button5 {
+        color: orange !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button6 {
+        color: violet !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button7 {
+        color: red !important;
+        font-size: smaller !important;
+    }
+    
+    #more_details_button8 {
+        color: olivedrab !important;
+        font-size: smaller !important;
+    }
+    
+    /*Menu1: Ordenes*/
+    
+    .menu1 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu2: Ordenes Vencidas*/
+    
+    .menu2 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu3: Ordenes Interrumpidas*/
+    
+    .menu3 {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu4: Ordenes ETR*/
+    
+    .menu4 {
+        grid-row: 5/6;
+        grid-column: 1/2;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu5: Electrodependientes*/
+    
+    .menu5 {
+        grid-column: 14/15;
+        grid-row: 4/5;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu7: Tabla*/
+    
+    .menu7 {
+        grid-column: 2/13;
+        grid-row: 5/-1;
+    }
+    
+    /*Menu6: Valparaíso*/
+    
+    .menu6 {
+        grid-row: 2/3;
+        grid-column: 13/14;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu8: Costa */
+    
+    .menu8 {
+        grid-column: 13/14;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu9: MargaMarga */
+    
+    .menu9 {
+        grid-column: 13/14;
+        grid-row: 4/5;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu10: Quillota */
+    
+    .menu10 {
+        grid-column: 13/14;
+        grid-row: 5/6;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu11: LosAndes */
+    
+    .menu11 {
+        grid-column: 13/14;
+        grid-row: 6/7;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Menu12: GC */
+    
+    .menu12 {
+        grid-column: 14/15;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Agua Potable Rural*/
+    
+    .menu13 {
+        grid-column: 14/15;
+        grid-row: 5/6;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Clientes Criticos*/
+    
+    .menu14 {
+        grid-column: 14/15;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Autoridades*/
+    
+    .menu15 {
+        grid-column: 14/15;
+        grid-row: 6/7;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*MovilesEnTurno*/
+    
+    .menu16 {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*BannerComunas*/
+    
+    .menu17 {
+        grid-column: 13/14;
+        grid-row: 1/2;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*BannerClientes*/
+    
+    .menu18 {
+        grid-column: 14/15;
+        grid-row: 1/2;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*IncidenciasOSF*/
+    
+    .menu19 {
+        grid-column: 12/13;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*BannerClientes*/
+    
+    .menu20 {
+        grid-column: 12/13;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*BannerClientes*/
+    
+    .menu21 {
+        grid-column: 12/13;
+        grid-row: 4/5;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /*Mapp*/
+    
+    .mapp {
+        grid-column: 2/12;
+        grid-row: 2/5;
+    }
+    
+    #map {
+        height: 100%;
+    }
+}
+
+
 @media screen and (min-width: 1300px) and (max-width: 1400px) {
     .twitter-timeline {
         height: 270px !important;
@@ -903,13 +1317,20 @@ html {
     #map {
         height: 100%;
         width: 100%;
-        max-width: 875px;
+        max-width: 945px;
         max-height: 342px;
     }
     /*Tabla*/
     .ReactTable {
         height: 215px;
     }
-}
 
+    .menu1_symbol, .menu2_symbol, .menu3_symbol, .menu4_symbol, .menu8_symbol, .menu10_symbol, .menu11_symbol {
+        width: inherit;
+        justify-items: center;
+        height: 100%;
+        justify-content: space-between;
+        padding-top: 0.5em;
+    }
+}
 

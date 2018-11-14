@@ -1,0 +1,31 @@
+import React from 'react';
+import { Label, Statistic } from 'semantic-ui-react'
+
+class Quillota extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick(e, n) {
+        console.log(e, n, "clicked");
+
+    }
+
+    render() {
+        return (
+           
+            <Statistic className="menu1_symbol text_statistics" color="violet" inverted size="small">
+              <Statistic.Value className="number_font">3%</Statistic.Value>
+              <Statistic.Label>Quillota</Statistic.Label>
+              <Label id="more_details_button6" as='a' onClick={this.onClick} className="more_details_button" color='black'>Ver +</Label>
+   
+            </Statistic>
+            
+        );
+    }
+}
+
+export default Quillota;
+

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactTable from "react-table";
 
 
-class Menu6 extends React.Component {
+class Tabla extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -123,5 +123,5 @@ class Menu6 extends React.Component {
         }
 }
 
-export default Menu6;
+export default Tabla;
 
