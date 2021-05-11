@@ -7,8 +7,8 @@ const env = {
 
 const conf = (()=>{
     var credentials = {
-        user: 'vialactea\\usrgis',
-        pass: 'N3L4y5HZ'
+        user: '',
+        pass: ''
     };
 
     return () => {return credentials;};
